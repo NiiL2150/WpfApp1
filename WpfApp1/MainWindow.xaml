@@ -11,7 +11,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Name="CalculateBox" IsEnabled="False" FontSize="32"></TextBox>
+        <TextBox Grid.Row="0" Name="CalculateBox" IsReadOnly="True" FontSize="64" Foreground="Black"></TextBox>
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -38,7 +38,7 @@
             <Button Grid.Column="2" Grid.Row="0">
                 <TextBlock FontSize="24">C  </TextBlock>
             </Button>
-            <Button Grid.Column="3" Grid.Row="0">
+            <Button Grid.Column="3" Grid.Row="0" Click="Button_Backspace_Click">
                 <TextBlock FontSize="24">Backspace</TextBlock>
             </Button>
 

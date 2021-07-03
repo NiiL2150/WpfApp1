@@ -29,5 +29,10 @@ namespace WpfApp1
         {
             CalculateBox.Text = CalculateBox.Text == "0" ? ((sender as Button).Content as TextBlock).Text : CalculateBox.Text + ((sender as Button).Content as TextBlock).Text;
         }
+
+        private void Button_Backspace_Click(object sender, RoutedEventArgs e)
+        {
+            CalculateBox.Text = CalculateBox.Text.Length > 0 ? CalculateBox.Text.Substring(0, CalculateBox.Text.Length - 1) : "";
+        }
     }
 }
